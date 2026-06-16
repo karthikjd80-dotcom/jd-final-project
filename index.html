@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>JD Bike Accessories</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800&display=swap"
+rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- GLOW -->
+
+<div class="bg-glow glow1"></div>
+<div class="bg-glow glow2"></div>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar"
+id="sidebar">
+
+<h1>MENU</h1>
+
+<a href="#home"
+onclick="closeMenu()">
+
+Home
+
+</a>
+
+<a href="#products"
+onclick="closeMenu()">
+
+Accessories
+
+</a>
+
+<a href="#orders"
+onclick="closeMenu()">
+
+Orders
+
+</a>
+
+<a href="#support"
+onclick="closeMenu()">
+
+Support
+
+</a>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<button class="menu-btn"
+onclick="openMenu()">
+
+☰
+
+</button>
+
+<h1 class="logo">
+
+JD BIKE ACCESSORIES
+
+</h1>
+
+<div class="profile-btn"
+onclick="openProfile()">
+
+PROFILE
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero"
+id="home">
+
+<h2>
+
+NEON RIDE <br>
+ACCESSORIES
+
+</h2>
+
+<p>
+
+Ride Beyond Limits
+
+</p>
+
+<button class="explore-btn"
+onclick="scrollProducts()">
+
+Explore Gear
+
+</button>
+
+<div class="hero-stats">
+
+<div class="stat-box">
+
+<h3>10K+</h3>
+<span>Orders</span>
+
+</div>
+
+<div class="stat-box">
+
+<h3>4.9★</h3>
+<span>Rating</span>
+
+</div>
+
+<div class="stat-box">
+
+<h3>24/7</h3>
+<span>Support</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products"
+id="products">
+
+<div class="product-card">
+
+<img src="data:image/jpeg;base64,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">
+
+<h2>Cyber Helmet</h2>
+
+<p>
+Premium neon racing helmet
+</p>
+
+<h3>₹4,999</h3>
+
+<button
+onclick="buyProduct('Cyber Helmet')">
+
+Buy Now
+
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://apolloonlinestoreproductioncdn.azureedge.net/images/thumbs/0002539_vredestein-centauro-ns_415.png">
+
+<h2>Racing Tyre</h2>
+
+<p>
+High grip superbike tyre
+</p>
+
+<h3>₹3,299</h3>
+
+<button
+onclick="buyProduct('Racing Tyre')">
+
+Buy Now
+
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://5.imimg.com/data5/SELLER/Default/2024/6/427112322/VA/ZC/OR/138116907/bike-screen-guard-for-bajaj-pulsar-ns-200-500x500.jpg">
+
+<h2>speedo meter</h2>
+
+<p>
+speedometer high accuracy
+</p>
+
+<h3>₹2,499</h3>
+
+<button
+onclick="buyProduct('NS Speedo meter')">
+
+Buy Now
+
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://i.ebayimg.com/00/s/ODAwWDgwMA==/z/H84AAOSwH5Ji6N~H/$_12.JPG?set_id=880000500F">
+
+<h2>LED Headlight</h2>
+
+<p>
+Ultra bright futuristic light
+</p>
+
+<h3>₹1,499</h3>
+
+<button
+onclick="buyProduct('LED Headlight')">
+
+Buy Now
+
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://m.media-amazon.com/images/I/71oWdQenOcL._AC_UF1000,1000_QL80_.jpg">
+
+<h2>Wheel Chain</h2>
+
+<p>
+SMOOTH GEAR SHIFTING
+</p>
+
+<h3>₹2,000</h3>
+
+<button
+onclick="buyProduct('Chain')">
+
+Buy Now
+
+</button>
+
+</div>
+
+<div class="product-card">
+
+<img src="https://www.helmetwala.com/cdn/shop/files/81DSmjqkZlL._SL1500.jpg?v=1723457705&width=1200">
+
+<h2>Engine oil</h2>
+
+<p>
+smooth and high perfomance
+</p>
+
+<h3>₹699</h3>
+
+<button
+onclick="buyProduct('engine oil')">
+
+Buy Now
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ORDERS -->
+
+<section class="orders"
+id="orders">
+
+<h1>Your Orders</h1>
+
+<p id="orderText">
+
+No Orders Yet
+
+</p>
+
+</section>
+
+<!-- SUPPORT -->
+
+<section class="support"
+id="support">
+
+<h1>Customer Support</h1>
+
+<p>
++91 9876543210
+</p>
+
+</section>
+
+<!-- PROFILE -->
+
+<div class="profile-popup"
+id="profilePopup">
+
+<h2>Rider Profile</h2>
+
+<p>Name : Karthik JD</p>
+
+<p>Phone : 7845800348</p>
+
+<p>Email : karthikjd80@gmail.com</p>
+
+<p>Company Started : 2026</p>
+
+<button
+onclick="closeProfile()">
+
+Close
+
+</button>
+
+</div>
+
+<!-- CHECKOUT -->
+
+<div class="checkout-page"
+id="checkoutPage">
+
+<h1>Confirm Your Order</h1>
+
+<p id="productText"></p>
+
+<input type="text"
+id="locationInput"
+placeholder="Enter Your Location">
+
+<div class="payment-options">
+
+<button
+onclick="confirmOrder('Google Pay')">
+
+Google Pay
+
+</button>
+
+<button
+onclick="confirmOrder('PhonePe')">
+
+PhonePe
+
+</button>
+
+<button
+onclick="confirmOrder('Cash On Delivery')">
+
+Cash On Delivery
+
+</button>
+
+</div>
+
+<button class="cancel-btn"
+onclick="closeCheckout()">
+
+Cancel
+
+</button>
+
+</div>
+
+<script 
+src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

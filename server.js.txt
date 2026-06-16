@@ -1,0 +1,39 @@
+const express = require("express");
+const Razorpay = require("razorpay");
+const cors = require("cors");
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static(__dirname));
+
+const razorpay = new Razorpay({
+    key_id: "rzp_test_Sw09L4agc9chpr",
+    key_secret: "fply7PDmr6jw3qNwfAGL7634"
+});
+
+app.post("/create-order", async (req, res) => {
+
+    const options = {
+        amount: req.body.amount * 100,
+        currency: "INR"
+    };
+
+    try {
+
+        const order = await razorpay.orders.create(options);
+
+        res.json(order);
+
+    } catch (error) {
+
+        res.status(500).send(error);
+
+    }
+
+});
+
+app.listen(5000, () => {
+    console.log("Server running on port 5000");
+});
